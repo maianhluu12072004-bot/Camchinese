@@ -1,4 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
+const [lang, setLang] = useState('vi');
+
+const t = {
+  vi: {
+    dashboard: "Tổng quan",
+    lesson: "Kho bài học",
+    test: "Kiểm tra",
+    admin: "Quản trị",
+    search: "Tìm kiếm..."
+  },
+  zh: {
+    dashboard: "总览",
+    lesson: "课程库",
+    test: "测试",
+    admin: "管理",
+    search: "搜索..."
+  }
+};
+<button
+  onClick={() => setLang(lang === 'vi' ? 'zh' : 'vi')}
+  className="bg-gray-100 px-3 py-1 rounded-xl text-xs font-bold"
+>
+  {lang === 'vi' ? 'VI' : '中文'}
+</button>
 import { initializeApp } from 'firebase/app';
 import { 
   getAuth, 
